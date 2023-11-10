@@ -1,0 +1,64 @@
+import { GenresResponse } from '@/interface/interface-genres';
+import { ResponsePlatforms } from '@/interface/interface-platforms';
+
+export type GamesResponse = Games[];
+
+export interface Games {
+  id: number;
+  age_ratings?: number[];
+  artworks?: artwork[];
+  category: number;
+  cover?: Cover;
+  created_at: number;
+  external_games?: number[];
+  first_release_date?: number;
+  genres?: GenresResponse;
+  name: string;
+  platforms?: ResponsePlatforms;
+  release_dates?: number[];
+  screenshots?: screenshot[];
+  similar_games?: number[];
+  slug: string;
+  summary?: string;
+  tags?: number[];
+  themes?: number[];
+  updated_at: number;
+  url: string;
+  websites?: number[];
+  checksum: string;
+  language_supports?: number[];
+  alternative_names?: number[];
+  collection?: number;
+  follows?: number;
+  franchises?: number[];
+  game_modes?: number[];
+  involved_companies?: number[];
+  keywords?: number[];
+  multiplayer_modes?: number[];
+  player_perspectives?: number[];
+  videos?: number[];
+  ports?: number[];
+  collections?: number[];
+  hypes?: number;
+  status?: number;
+  version_parent?: number;
+  version_title?: string;
+  game_engines?: number[];
+}
+
+export interface Cover {
+  id: number;
+  url: string;
+  image_id: string;
+  width: number;
+}
+export interface screenshot {
+  id: number;
+  url: string;
+  image_id: string;
+}
+export interface artwork {
+  id: number;
+  url: string;
+  image_id: string;
+}
