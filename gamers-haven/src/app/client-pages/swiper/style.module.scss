@@ -1,0 +1,13 @@
+.wrapper_layout{
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+}
+.bg_slide{
+  background: rgba(26,33,64,1);
+  //background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 40.9%, rgba(81,84,115,1) 87.1% );
+  @apply ease-in-out duration-300;
+  &:hover{
+    background-image: linear-gradient( 94.3deg,  rgba(81,84,115,1) 40.9%, rgba(26,33,64,1) 87.1% );
+  }
+}

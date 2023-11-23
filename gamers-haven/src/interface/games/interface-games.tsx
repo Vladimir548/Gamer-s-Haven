@@ -1,5 +1,6 @@
 import { GenresResponse } from '@/interface/interface-genres';
 import { ResponsePlatforms } from '@/interface/interface-platforms';
+import { ReleaseDate } from '@/interface/interface-release_dates';
 
 export type GamesResponse = Games[];
 
@@ -15,10 +16,11 @@ export interface Games {
   genres?: GenresResponse;
   name: string;
   platforms?: ResponsePlatforms;
-  release_dates?: number[];
+  release_dates?: ReleaseDate[];
   screenshots?: screenshot[];
   similar_games?: number[];
   slug: string;
+  storyline?: string;
   summary?: string;
   tags?: number[];
   themes?: number[];
@@ -44,6 +46,10 @@ export interface Games {
   version_parent?: number;
   version_title?: string;
   game_engines?: number[];
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
 }
 
 export interface Cover {

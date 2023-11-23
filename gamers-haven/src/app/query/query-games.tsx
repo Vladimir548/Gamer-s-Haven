@@ -1,10 +1,6 @@
 import axios from 'axios';
 import { GamesResponse } from '@/interface/games/interface-games';
-// const headers = {
-//   'Client-ID': `${process.env.NEXT_PUBLIC_CLIENTID}`,
-//   Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEYAUTHORIZATION} `,
-// };
-// const data = `fields name, slug, cover.url; limit 10; where slug = "tomb-raider";`;
+
 export const QueryGames = {
   async getGames() {
     const { data } = await axios.post(

@@ -15,6 +15,11 @@ const config: Config = {
       flex: {
         'flex-full': '0 0 100%',
       },
+      screens: {
+        lt: '940px',
+        ls: '425px',
+        ms: '320px',
+      },
     },
   },
   plugins: [],
