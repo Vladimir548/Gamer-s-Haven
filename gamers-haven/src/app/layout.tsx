@@ -4,6 +4,12 @@ import './globals.scss';
 import QueryProviders from '@/providers/QueryProviders';
 import Sidebar from '@/app/components/sidebar/Sidebar';
 import Header from '@/app/components/header/Header';
+import ReduxProvider from '@/providers/ProviderRedux';
+
+import ProviderNextUi from '@/providers/ProviderNextUI';
+import { Suspense } from 'react';
+import Loading from '@/app/loading';
+import NavigationBottom from '@/app/components/navigation-bottom/NavigationBottom';
 
 const noto = Noto_Serif({ subsets: ['latin'] });
 
@@ -17,15 +23,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={noto.className}>
         <QueryProviders>
-          <div className="flex">
-            <div className={''}>
-              <Sidebar />
-            </div>
-            <main className={'relative w-full '}>
-              <Header />
-              <div className="px-2  ">{children}</div>
-            </main>
-          </div>
+          <ReduxProvider>
+            <ProviderNextUi>
+              <div className="">
+                <div className={''}>
+                  <Sidebar />
+                </div>
+                <main className={'relative w-full '}>
+                  <Header />
+
+                  <div className="px-2">{children}</div>
+                  <div className="mt-[50px] md:mt-0">
+                    <NavigationBottom />
+                  </div>
+                </main>
+              </div>
+            </ProviderNextUi>
+          </ReduxProvider>
         </QueryProviders>
       </body>
     </html>

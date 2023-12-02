@@ -1,6 +1,7 @@
 .input{
   width: 300px;
-  height: 30px;
+  height: 40px;
+
   @apply rounded-lg bg-violet-900;
   background-clip: padding-box;
   backdrop-filter: blur(20px);

@@ -6,6 +6,7 @@ import HeaderDropdown from '@/app/components/header/header-search/HeaderDropdown
 import useDebounce from '@/app/hooks/useDebounce';
 import { useQuery } from '@tanstack/react-query';
 import { QueryHome } from '@/app/query/query-home';
+
 export default function HeaderSearch() {
   const [isValue, setIsValue] = useState<string>('');
   const debounce = useDebounce(isValue);
@@ -16,6 +17,7 @@ export default function HeaderSearch() {
       setIsOpen(false);
     }
   };
+
   useEffect(() => {
     document.addEventListener('click', handleClickOutside);
     return () => {
@@ -27,7 +29,7 @@ export default function HeaderSearch() {
     queryFn: () => QueryHome.getSearch(debounce),
   });
   return (
-    <div className={'relative'}>
+    <div className={'relative '}>
       <div ref={dropdownRef} onClick={(e) => handleClickOutside(e)} className="">
         <input
           onClick={() => setIsOpen(true)}
@@ -41,7 +43,7 @@ export default function HeaderSearch() {
         <div className="absolute top-0 right-0 ">
           <button
             className={
-              'flex justify-center items-center  rounded-r-lg border-l-2 border-white/30 w-[30px] h-[30px] bg-violet-900 ease-in-out duration-300 hover:bg-violet-700'
+              'flex justify-center items-center bg-transparent  rounded-r-lg border-l-2 border-white/30 w-[30px] h-[40px]  ease-in-out duration-300 hover:bg-violet-700'
             }
             type={'submit'}
           >

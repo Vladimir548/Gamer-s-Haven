@@ -9,7 +9,7 @@ import {
   BsPlayFill,
 } from 'react-icons/bs';
 import { FaBuilding, FaRegBuilding } from 'react-icons/fa';
-import { Icons } from 'next/dist/lib/metadata/types/metadata-types';
+
 import { IconType } from 'react-icons';
 interface IRoutes {
   id: number;

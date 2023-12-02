@@ -43,6 +43,8 @@ export interface Games {
   collections?: number[];
   hypes?: number;
   status?: number;
+  rating: number;
+  rating_count: number;
   version_parent?: number;
   version_title?: string;
   game_engines?: number[];
@@ -50,6 +52,11 @@ export interface Games {
   hours: number;
   minutes: number;
   seconds: number;
+  palettes: Palette[];
+}
+interface Palette {
+  imgUrl?: string;
+  colors: (number[] | undefined)[];
 }
 
 export interface Cover {

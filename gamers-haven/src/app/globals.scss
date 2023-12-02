@@ -3,10 +3,22 @@
 @tailwind utilities;
 body {
   height: 100%;
-  background: rgba(9,29,85,1);
+
   background-image: radial-gradient( circle 815px at 23.4% -21.8%, rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2% );
   background-attachment: fixed, scroll;
   color: #fff;
+
+}
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.62);
+  overflow-y: hidden;
+  z-index: 990;
+  backdrop-filter: blur(20px);
 
 }
 .name{
@@ -93,10 +105,18 @@ body {
   @apply  p-1 bg-black/50 rounded-lg backdrop-blur text-sm  xl:text-lg md:text-base  ms:text-[10px];
 }
 .title_sections{
-  @apply my-2 text-[18px]   xl:text-4xl md:text-3xl   ms:text-2xl;
+  @apply my-2 text-[18px]   xl:text-4xl md:text-3xl   ms:text-2xl font-bold;
+  background-image: linear-gradient( 67.2deg,  rgba(37,208,199,1) -7.5%, rgba(165,90,240,1) 62.7% );
+  color: #25D0C7FF;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: block;
+
 }
 .title_card{
-  @apply  text-[14px]  xl:text-lg md:text-base   ms:text-sm  ;
+  @apply  text-[14px]  xl:text-lg md:text-base   ms:text-[12px] overflow_line_two   ;
 }
 .shadow_custom{
   box-shadow: 0px 0px 7px rgba(255,255,255,.3);

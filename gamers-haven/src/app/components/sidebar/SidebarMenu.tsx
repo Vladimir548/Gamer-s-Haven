@@ -27,8 +27,8 @@ export default function SidebarMenu({
       <Link
         key={id}
         className={` text-white flex items-center my-1  p-2 ${
-          isActive ? 'bg-blue-700' : 'bg-violet-800'
-        }  backdrop-blur rounded-sm  ease-in-out duration-300  w-full hover:bg-violet-950 `}
+          isActive ? 'bg-blue-700/70' : 'bg-violet-800/70'
+        }  backdrop-blur rounded-lg  ease-in-out duration-300  w-full hover:bg-violet-950/70 `}
         href={link}
       >
         <span className={'pr-2 '}>{isActive ? <IconActive size={24} /> : <Icon size={24} />}</span>

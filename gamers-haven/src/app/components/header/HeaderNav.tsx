@@ -6,7 +6,7 @@ import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-i
 export default function HeaderNav() {
   const router = useRouter();
   return (
-    <div className={'flex gap-x-2 items-center'}>
+    <div className={'flex gap-x-2 items-center  '}>
       <span
         className={
           'p-1 rounded-full bg-slate-800 ease-in-out cursor-pointer duration-300 hover:bg-slate-600'

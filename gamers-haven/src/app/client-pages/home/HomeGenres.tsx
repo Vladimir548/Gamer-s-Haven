@@ -12,8 +12,8 @@ export default function HomeGenres() {
         {data?.map((genre) => (
           <span
             className={
-              ' flex flex-wrap title_card justify-center p-1 text-center items-center rounded-lg w-[150px] h-[130px]  backdrop-blur' +
-              ' shadow_custom'
+              ' flex flex-wrap title_card bg-slate-500 justify-center p-1 text-center items-center rounded-lg w-[150px] h-[130px]  backdrop-blur' +
+              ' shadow_custom hover:bg-slate-700'
             }
             key={genre.id}
           >

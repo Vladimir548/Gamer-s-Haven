@@ -1,7 +1,7 @@
 'use client';
 import NextImage from 'next/image';
 import * as AspectRatio from '@radix-ui/react-aspect-ratio';
-import { useRef } from 'react';
+
 interface IImage {
   image_id: string | undefined;
   size: string;
@@ -9,9 +9,9 @@ interface IImage {
   quality?: number;
   ratio: number;
 }
-export default function Image({ image_id, size, styleName, quality, ratio }: IImage) {
+export default function ImageCustom({ image_id, size, styleName, quality, ratio }: IImage) {
   return (
-    <div className={'w-full h-full flex-1'}>
+    <div className={'w-full  flex-1'}>
       <AspectRatio.Root ratio={ratio}>
         <NextImage
           src={`https://images.igdb.com/igdb/image/upload/t_${size}/${image_id}.jpg`}
